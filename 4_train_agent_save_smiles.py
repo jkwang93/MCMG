@@ -20,7 +20,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "6"
 
 
 def train_agent(restore_prior_from='./data/DM_middle_drd.ckpt',
-                restore_agent_from='./data/DM_middle_drd.ckpt',
+                restore_agent_from='./data/DM_middle_drd.ckpt',agent_save='./',
                 batch_size=128, n_steps=5000, sigma=60, save_dir='./MCMG_results/',
                 experience_replay=0):
     voc = Vocabulary(init_from_file="data/Voc_RE1")
@@ -90,6 +90,8 @@ def train_agent(restore_prior_from='./data/DM_middle_drd.ckpt',
             save_smiles_df = pd.DataFrame(smiles_save)
             save_smiles_df.to_csv(save_dir + '_MCMG_drd.csv', index=False, header=False)
             break
+        if step % 100 == 0 and step != 0:
+            torch.save(Agent.rnn.state_dict(), agent_save)
 
         # Calculate augmented likelihood
         augmented_likelihood = prior_likelihood + sigma * Variable(score)
@@ -151,10 +153,10 @@ if __name__ == "__main__":
     parser.add_argument('--middle', action='store', dest='restore_prior_from',
                         default='./data/DM_middle_drd.ckpt',
                         help='Path to an RNN checkpoint file to use as a Prior')
-    parser.add_argument('--agent', action='store', dest='restore_agent_from',
+    parser.add_argument('--agent', action='store', dest='agent_save',
                         default='./data/DM_middle_drd.ckpt',
                         help='Path to an RNN checkpoint file to use as a Agent.')
-    parser.add_argument('--save-dir', action='store', dest='save_dir',
+    parser.add_argument('--save-file-path', action='store', dest='save_dir',
                         help='Path where results and model are saved. Default is data/results/run_<datetime>.')
 
     arg_dict = vars(parser.parse_args())
