@@ -10,7 +10,7 @@ MCMG: multi-constraints molecular generation approach based on conditional trans
 
 
 
-## 使用说明
+## How to run？
 The default task of our code is the DRD2 target. Users can customize their own tasks, which need to be modified in data_structs in MCMG_utils and 1-4 training code.
 
 - There is an example of initial data: it is in data/drd2/con_RE_filter_test_drd.csv
