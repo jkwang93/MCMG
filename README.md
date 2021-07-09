@@ -1,6 +1,6 @@
-# MCMG
+# MCMG [![DOI](https://zenodo.org/badge/369146587.svg)](https://zenodo.org/badge/latestdoi/369146587)
 MCMG: multi-constraints molecular generation approach based on conditional transformer and reinforcement learning
-[![DOI](https://zenodo.org/badge/369146587.svg)](https://zenodo.org/badge/latestdoi/369146587)
+
 
 ## Environment
 - python = 3.8.3
