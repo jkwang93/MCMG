@@ -11,7 +11,7 @@ MCMG: multi-constraints molecular generation approach based on conditional trans
 
 
 ## How to run？
-The default task of our code is to generate molecules of task 1 in paper(DRD2+QED+SA). Users can customize their own tasks by modified the code.
+The default task of our code is to generate molecules of task 1 in paper(DRD2+QED+SA). Users can customize their own tasks by modifying the code.
 
 - The path of initial data:  data/drd2/con_RE_filter_test_drd.csv and data/drd2/con_RE_filter_train_drd.csv
 
