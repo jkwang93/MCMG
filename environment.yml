@@ -1,0 +1,14 @@
+name: MCMG
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - absl-py=0.12.0=py36haa95532_0
+  - blas=1.0=mkl
+  - boost=1.74.0=py36h9a8d428_3
+  - python = 3.8.3
+  - pytroch = 1.6.0
+  - RDKit
+  - numpy
+  - pandas
