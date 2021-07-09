@@ -11,9 +11,9 @@ MCMG: multi-constraints molecular generation approach based on conditional trans
 
 
 ## How to run？
-The default task of our code is the DRD2 target. Users can customize their own tasks, which need to be modified in data_structs in MCMG_utils and 1-4 training code.
+The default task of our code is to generate molecules of task 1 in paper(DRD2+QED+SA). Users can customize their own tasks by modified the code.
 
-- There is an example of initial data: it is in data/drd2/con_RE_filter_test_drd.csv and data/drd2/con_RE_filter_train_drd.csv
+- The path of initial data:  data/drd2/con_RE_filter_test_drd.csv and data/drd2/con_RE_filter_train_drd.csv
 
 ```
 python 1_train_prior_Transformer.py --train-data {your_training_data_path} --valid-data {your_valid_data_path} --save-prior-path {path_to_save_prior_model}
