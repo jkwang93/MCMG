@@ -137,7 +137,7 @@ class drd2_model():
 
     @classmethod
     def fingerprints_from_mol(cls, mol):  # use ECFP4
-        features_vec = AllChem.GetMorganFingerprintAsBitVect(mol, 2, nBits=2048)
+        features_vec = AllChem.GetMorganFingerprintAsBitVect(mol, 3, nBits=2048)
         features = np.zeros((1,))
         DataStructs.ConvertToNumpyArray(features_vec, features)
         return features.reshape(1, -1)
