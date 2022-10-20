@@ -5,7 +5,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from utils import Variable
+from MCMG_utils.utils import Variable
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
