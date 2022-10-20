@@ -67,7 +67,7 @@ def train_middle(train_data, save_model='./DM.ckpt'):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Main script for running the model")
     parser.add_argument('--train-data', action='store', dest='train_data')
-    parser.add_argument('--save-middle-path', action='store', dest='save_dir',
+    parser.add_argument('--save-middle-path', action='store', dest='save_model_dir',
                         help='Path and name of middle model.')
 
     arg_dict = vars(parser.parse_args())
