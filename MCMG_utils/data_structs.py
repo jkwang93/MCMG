@@ -42,6 +42,8 @@ class Vocabulary(object):
             chars.append(self.reversed_vocab[i])
         smiles = "".join(chars)
         smiles = smiles.replace("L", "Cl").replace("R", "Br")
+        if 'DBrD2' in smiles:
+            smiles = smiles.replace('DBrD2', 'DRD2')
         return smiles
 
     def tokenize(self, smiles):
